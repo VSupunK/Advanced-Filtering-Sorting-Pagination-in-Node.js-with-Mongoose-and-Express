@@ -7,8 +7,10 @@ const carSchema = new mongoose.Schema({
   rating: Number,
   company: {
     type: String,
-    enum: ["tesla", "bmw", "toyota", "audi"],
-    message: "{VALUE} is not supported",
+    enum: {
+      values: ["tesla", "bmw", "toyota", "audi"],
+      message: "{VALUE} is not supported",
+    },
   },
 });
 
